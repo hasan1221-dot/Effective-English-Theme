@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="EffectiveEnbglish.css" />
+    <title>Effective English — Tutors & Courses</title>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="Rasmlar/Screenshot 2025-10-10 152806.png" alt="Effective English logo" class="logo">
+                <a href="#" class="brand-name">Effective English</a>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#tutors">Tutors</a>
+                <a href="#groups">Group classes</a>
+                <a href="#corporate">Corporate training</a>
+                <a href="#become">Become a tutor</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <button class="mobile-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-left">
+                    <h1>Learn English effectively with native & certified tutors</h1>
+                    <p class="lead">One-on-one lessons, group classes and corporate programs tailored to your needs.</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="#tutors">Find a tutor</a>
+                        <a class="btn" href="#groups">View group classes</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <img src="Screenshot 2025-10-10 152806.png" alt="Students" />
+                </div>
+            </div>
+        </section>
+
+        <section id="tutors" class="section container">
+            <h2>Tutors</h2>
+            <p class="muted">Experienced tutors for all levels — personalized lessons and flexible scheduling.</p>
+
+            <div class="cards">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800&auto=format&fit=crop" alt="Tutor 1">
+                    <h3>Anna Smith</h3>
+                    <p class="sub">CELTA-certified • Conversation & exam prep</p>
+                    <a class="btn" href="#">Book lesson</a>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="Tutor 2">
+                    <h3>Michael Lee</h3>
+                    <p class="sub">Business English & presentations</p>
+                    <a class="btn" href="#">Book lesson</a>
+                </article>
+
+                <article class="card">
+                    <img src="car-bmw.jpg" alt="Tutor 3">
+                    <h3>John Smith</h3>
+                    <p class="sub">Kids & teen programs</p>
+                    <a class="btn" href="#">Book lesson</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="groups" class="section container">
+            <h2>Group classes</h2>
+            <p class="muted">Small groups, interactive lessons and weekly practice sessions.</p>
+            <div class="grid">
+                <div class="feature">
+                    <h4>Beginner</h4>
+                    <p>Foundations, speaking basics and listening practice.</p>
+                </div>
+                <div class="feature">
+                    <h4>Intermediate</h4>
+                    <p>Grammar in use, conversation and vocabulary building.</p>
+                </div>
+                <div class="feature">
+                    <h4>Advanced</h4>
+                    <p>Fluency, exam prep (IELTS, TOEFL) and professional skills.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section container">
+            <h2>Contact / Enroll</h2>
+            <form class="contact-form" action="#" method="post" novalidate>
+                <label>
+                    Name
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Message
+                    <textarea name="message" rows="4" required></textarea>
+                </label>
+                <div class="form-actions">
+                    <button class="btn primary" type="submit">Send</button>
+                    <button class="btn" type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Effective English. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="#privacy">Privacy</a>
+                <a href="#terms">Terms</a>
+            </nav>
+        </div>
+    </footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.mobile-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+    });
+</script>
+</body>
+</html>

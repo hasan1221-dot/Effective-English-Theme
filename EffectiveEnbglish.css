@@ -1,0 +1,239 @@
+:root{
+    --accent:#2a9d8f;
+    --dark:#0f1720;
+    --muted:#6b7280;
+    --bg:#fbfbfb;
+    --container:1100px;
+    --radius:10px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    background:var(--bg);
+    color:var(--dark);
+    -webkit-font-smoothing:antialiased;
+}
+
+.container{
+    max-width:var(--container);
+    margin:0 auto;
+    padding:0 18px;
+}
+.site-header{
+    background:#fff;
+    border-bottom:1px solid #e6e6e6;
+    position:sticky;
+    top:0;
+    z-index:50;
+}
+.header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 0;
+}
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.logo{
+    width:56px;
+    height:56px;
+    object-fit:cover;
+    border-radius:8px;
+}
+.brand-name{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:700;
+    font-size:1.05rem;
+}
+.main-nav{
+    display:flex;
+    gap:14px;
+    align-items:center;
+}
+.main-nav a{
+    text-decoration:none;
+    color:var(--muted);
+    padding:8px 10px;
+    border-radius:8px;
+}
+.main-nav a:hover{
+    color:var(--dark);
+    background:#f3faf9;
+}
+.mobile-toggle{
+    display:none;
+    background:none;
+    border:0;
+    font-size:1.2rem;
+}
+.hero{
+    padding:48px 0;
+}
+.hero-inner{
+    display:flex;
+    gap:24px;
+    align-items:center;
+}
+.hero-left{
+    flex:1;
+}
+.hero-right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+.hero-right img{
+    max-width:360px;
+    border-radius:12px;
+}
+.hero h1{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+.lead{
+    color:var(--muted);
+    margin-bottom:16px
+}
+.btn{
+    display:inline-block;
+    padding:10px 14px;
+    border-radius:8px;
+    text-decoration:none;
+    background:#fff;
+    border:1px solid #e6e6e6;
+    color:var(--dark);
+    margin-right:8px;
+}
+.btn.primary{
+    background:var(--accent);
+    color:#fff;
+    border:0;
+
+}
+
+.section{
+    padding:28px 0;
+    background:transparent;
+}
+.muted{
+    color:var(--muted);
+    margin-bottom:12px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:14px
+}
+.card{
+    background:#fff;
+    padding:12px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.04);
+    text-align:center;
+}
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:8px;
+}
+.card h3{
+    margin:10px 0 4px;
+}
+.card .sub{
+    color:var(--muted);
+    font-size:0.95rem;
+    margin-bottom:8px;
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:12px;
+}
+.feature{
+    background:#fff;
+    padding:14px;
+    border-radius:10px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.04);
+}
+.contact-form{
+    max-width:560px;
+    display:grid;
+    gap:10px;
+}
+.contact-form label{
+    display:flex;
+    flex-direction:column;
+    color:var(--muted);
+    font-size:0.95rem;
+}
+.contact-form input,.contact-form textarea{
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #e6e6e6;
+    margin-top:6px;
+}
+.form-actions{
+    display:flex;
+    gap:8px;
+    margin-top:6px}
+.site-footer{
+    padding:16px 0;
+    background:#fff;
+    border-top:1px solid #e6e6e6;
+    margin-top:28px;
+}
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+@media (max-width:900px){
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .hero-right img{
+        max-width:280px;
+    }
+}
+
+@media (max-width:640px){
+    .hero-inner{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+    .main-nav{display:none;
+        position:absolute;
+        right:18px;
+        top:64px;
+        background:#fff;
+        padding:12px;
+        border-radius:8px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+    .main-nav.open{
+        display:flex;
+        flex-direction:column;
+        gap:8px;
+    }
+    .mobile-toggle{
+        display:block;
+    }
+    .cards{
+        grid-template-columns:1fr;
+    }
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
